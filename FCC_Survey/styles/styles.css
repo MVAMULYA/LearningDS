@@ -1,7 +1,7 @@
 head, body{
     text-align: center;
     font-family: 'Asul', sans-serif;
-    background: linear-gradient(-15deg,#ffe6b3,#ffffb3);
+    background: linear-gradient(-15deg,#ffb3b3,#ffffb3);
     font-size: 100%;
     background-repeat: no-repeat;
     width: auto;
@@ -11,10 +11,9 @@ head, body{
     font-weight: bold;
 }
 #survey-form{
-
-    margin: 10px 125px 10px 125px;
-     
-    border-radius: 10px;
+    border-radius: 5px;
+    margin: 20px 125px 20px 125px;     
+    
     height: auto;
     width: auto;
     background: linear-gradient(-15deg,#ffffe6,#ffffff);
@@ -27,10 +26,10 @@ head, body{
     font-size: 1.25em;
     height: auto;
     width: auto;
-    padding: 10px 50px 10px 50px;
+    padding: 5px;
     font-family: 'Asul', sans-serif;
     color: black;
-    border: 1px solid cadetblue;
+    border: 1px solid #1a66ff;
        
 }
 
@@ -39,7 +38,7 @@ div.floatleft{
     display: inline-block;
     padding: 5px;
     margin-left: 10px;
-    text-align: right;
+    text-align: left;
     vertical-align: top;
    
 }
@@ -60,13 +59,14 @@ textarea{
     border-radius: 5px;
     margin: 10px;
     padding: 2px;
+    width: 100%;
 }
 input[type=text], input[type=email] ,input[list]{
     padding: 8px ;    
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    
+    width: 100%;
 }
 #description{
     font-size: 0.8em;
@@ -80,23 +80,8 @@ button{
     
 }
 
-@media only screen and (min-width: 320px){
-    textarea{
-        width: 100%;
-    }
-    div.floatleft{
-        text-align: left;
-    }
 
-    input[type=text], input[type=email] ,input[list]{
-        width: 100%;
-    }
-    #submit{
-        padding: 5px;
-    }
-
-}
-@media only screen and (min-width: 1050px){
+@media only screen and (min-width: 1040px){
     textarea{
         width: 80%;
     }
@@ -117,5 +102,5 @@ button{
 
 
 button:hover{
-    background-color: #66b3ff;
+    background-color: #1a66ff;
 }
