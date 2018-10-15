@@ -1,0 +1,112 @@
+head, body{
+    min-width: 768px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    background-color: #f5f5f0;
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar{
+    position: fixed;
+    height: 100%;
+    width: 250px;;
+    
+    margin: 0px 5px 5px 5px;
+    padding: 1em;
+    border-right: 2px double black;
+    top: 0px;
+    left:0px;
+    
+}
+header{
+    font-size: 2em;
+}
+
+#navbar ul{
+    
+    margin: 2px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+
+#navbar li{
+    list-style: none;
+    padding: 1.3em;   
+    scroll-behavior: auto;
+    margin-left: -30px;
+    
+    
+}
+
+
+#navbar a{
+    text-decoration: none;
+}
+
+#navbar a:hover{
+    font-size: 1.4em;
+}
+
+
+
+#main-doc{
+    margin:10px 10px 10px 305px;
+    padding: 1.2em;   
+    height: auto;
+
+}
+
+.main-section{
+    padding: 1.2em;
+    line-height: 1.5em;
+
+}
+
+code{
+    display: block;
+    border-radius: 15px;
+    background: #D4EDF7;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1em;
+    width: 75%;
+    font-size: 1.2em;
+    color: #B84E14;
+}
+
+#navbar header{
+    text-align: center;
+}
+
+@media only screen and (max-width:850px){
+
+    #navbar{
+        width: 100%;
+        position: relative;
+        max-height: 200px;
+        border: 2px double black;
+    }
+    #navbar li{
+        list-style: none;
+       
+        padding: 0.8em;   
+        scroll-behavior: auto;
+        margin-left: -30px;
+       
+        
+    }
+    #navbar ul{
+        max-height: 150px;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+    #main-doc{
+        margin:10px;
+        padding: 0.8em;   
+        height: auto;
+    
+    }
+
+}
