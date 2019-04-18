@@ -1,2 +1,3 @@
 # PracticeAlgorithms
-Searching, Sorting Algorithms, and projects from FreeCodeCamp
+Implementation of different DataStructures.
+Coding Practice.
