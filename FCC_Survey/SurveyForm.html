@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8" />
+                <link rel="stylesheet" href="styles/styles.css" type="text/css">
+                <link href="https://fonts.googleapis.com/css?family=Asul" rel="stylesheet">
+                <title>Apartment Survey Form</title>
+            </head>
+            <body>
+            <h1 id="title">Survey Form</h1>
+            <p id="description">A survey on Maintenance of our Apartment</p>
+            <form id="survey-form" method="POST" >
+                <div class="row" >
+                    <div class="floatleft"><label id="name-label">*Name:</label></div>
+                    <div class="floatright"><input type="text" name="name" id="name" placeholder="Enter your Full Name" required></br></div>
+                </div>
+                    <div class="row" >
+                   
+                    <div class="floatleft"><label id="email-label">*E-mail:</label></div>
+                    <div class="floatright"><input type="email" name="email" id="email" placeholder="Enter your mail-id" required></br></div>
+                </div>
+                <div class="row" >
+                    <div class="floatleft"><label id="number-label">*Age:</label></div>
+                    <div class="floatright"><input type="number" name="age" id="number" placeholder="age" min="10" max="80" required></br></div>
+                </div>   
+                <div class="row" >
+                    <div class="floatleft"><label>*Which Flat do you reside in?</label></div>
+                    <div class="floatright">
+                    <input list="dropdown">
+                    <datalist id="dropdown">
+                        <option value="101">101</option>
+                        <option value="102">102</option>
+                        <option value="201">201</option>
+                        <option value="202">202</option>
+                        <option value="301">301</option>
+                        <option value="302">302</option>
+                        <option value="401">401</option>
+                        <option value="402">402</option>
+        
+                    </datalist></br>
+                    </div>  
+                </div>                              
+                <div class="row" >
+               
+                    <div class="floatleft"><label>*Are you tenant or owner of a flat?</label></div>
+                    <div class="floatright">
+                    <input type="radio" value="owner" name="resident">owner </br>
+                    <input type="radio" value="tenent" name="resident">tenent </br>
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="floatleft"><label>What do you think Should be improved in maintaing our apartment?</br>(check all that may apply)</label>
+                    </div>
+                    <div class="floatright">
+                    <input type="checkbox" name="cleaning" value="cleaning">Floor and Premises Cleaning </br>
+                    <input type="checkbox" name="parking1" value="bike">Bike Parking slot </br>
+                    <input type="checkbox" name="parking2" value="car">Car Parking Slot </br>
+                    <input type="checkbox" name="greenery" value="greenery">Maintain apartment greenery </br>
+                    <input type="checkbox" name="committee" value="committee">Increasing Committee transparency </br>
+                    <input type="checkbox" name="electricity" value="electricity">Common Electricity </br>
+                    <input type="checkbox" name="security" value="security">Making the premises more secure </br>
+                    <input type="checkbox" name="repairs" value="repairs">Any repairs to be done in the premises </br>
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="floatleft"><label>Any comments or suggestions:</label></div>
+                    <div class="floatright">
+                    <textarea rows="8" cols="40" placeholder="Enter comments or suggestions here..."></textarea></br>
+                    </div>
+                </div>        
+                <div class="row" >
+                    <button type="submit" value="submit" id="submit" formmethod="POST">submit</button></br>
+                </div>
+                 
+
+            </form>
+         
+            </body>
+</html>

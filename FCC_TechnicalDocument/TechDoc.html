@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>React - Documentation</title>
+        <link rel="stylesheet" href="styles\styles.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+        <nav id="navbar"> 
+        
+            <header>Introduction to React</header>
+        <ul>
+            <a class="nav-link" href="#What_Is_React?" ><li> What Is React? </li></a>
+            <a class="nav-link" href="#Knowledge_Level_Assumptions"><li>Knowledge Level Assumptions</li> </a>
+            <a class="nav-link" href="#Try_React"><li> Try React </li></a>
+            <a class="nav-link" href="#Add_React_to_a_Website"><li> Add React to a Website </li></a>
+            <a class="nav-link" href="#Hello_world"><li> Hello world </li></a>
+            <a class="nav-link" href="#Rendering_Elements"><li> Rendering Elements </li></a>
+            <a class="nav-link" href="#Components_and_Props"><li> Components and Props </li></a>
+            <a class="nav-link" href="#References"><li> References</li></a>
+            
+        </ul>
+        </nav>
+        <main id="main-doc">
+        <section id="What_Is_React?" class="main-section">
+            <header >What Is React?</header>
+            <article>
+                
+                <p>
+                    <ul>
+                        <li>
+                        React is a declarative, efficient, and flexible JavaScript library for building user interfaces. <br>
+                        It lets you compose complex UIs from small and isolated pieces of code called “components”.
+                        </li>
+                        <li>
+                        React makes it painless to create interactive UIs. Design simple views for each state in your application, <br>
+                        and React will efficiently update and render just the right components when your data changes.
+                        </li>
+                        <li>
+                        Build encapsulated components that manage their own state, then compose them to make complex UIs.<br>
+                        Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+                        </li>
+                    </ul>
+                </p>
+                
+            </article>
+        </section>
+        <section id="Knowledge_Level_Assumptions" class="main-section">
+            <header >Knowledge Level Assumptions</header>
+            <article>
+                
+                <p>
+                    <ul>
+                        <li>React is a JavaScript library, and so we’ll assume you have a basic understanding of the JavaScript language.</li>
+                        <li>We’ll assume that you have some familiarity with HTML,but you should be able to follow along even if you’re coming from a different programming language.</li>
+                        <li>We’ll also assume that you’re familiar with programming concepts like functions, objects, arrays, and to a lesser extent, classes.</li>
+                    </ul>
+                </p>
+            </article>
+        </section>   
+        <section id="Try_React" class="main-section"> 
+            <header >Try React</header>
+            <article>
+                
+                <p>
+                React components implement a <strong>render() method</strong>  that takes input data and returns what to display. <br>
+                This example uses an <em>XML-like</em> syntax called <strong>JSX</strong> . Input data that is passed into the component can be accessed by render() via this.props.<br>
+                </p>
+                <code>
+                    class HelloMessage extends React.Component { <br>
+                    &ensp;    render() { <br>
+                    &ensp;&ensp;    return ( <br>
+                    &ensp;&ensp;&ensp;    &lt;div&gt; <br>
+                    &ensp;&ensp;&ensp;&ensp;    Hello {this.props.name} <br>
+                    &ensp;&ensp;&ensp;    &lt;/div&gt; <br>
+                    &ensp;&ensp;&ensp;     ); <br>
+                    &ensp;&ensp;    } <br>
+                    } <br>
+                  <br>
+                  ReactDOM.render( <br>
+                  &ensp;&lt;HelloMessage name="Taylor" /&gt;, <br>
+                  &ensp;  mountNode <br>
+                    ); 
+                </code>
+            </article> 
+        </section>
+        <section id="Add_React_to_a_Website" class="main-section">
+            <header >Add React to a Website</header>
+            <article>
+                
+                <p>
+                React has been designed from the start for gradual adoption, and 
+                you can use as little or as much React as you need. Perhaps you only want to 
+                add some “sprinkles of interactivity” to an existing page. React components are a great way to do that.
+                </p>
+                <p>
+                The majority of websites aren’t, and don’t need to be, single-page apps. With a few lines of code and no build tooling, 
+                try React in a small part of your website. You can then either gradually expand its presence, or keep it contained 
+                to a few dynamic widgets.
+                </p>
+                <p>
+                <ul>
+                    <li>Step 1: Add a DOM Container to the HTML</li>
+                    <li>Step 2: Add the Script Tags</li>
+                    <li>Step 3: Create a React Component</li>
+                </ul>
+                </p>
+                <code>
+                    'use strict'; <br>
+                    <br>
+                    const e = React.createElement; <br>
+                    <br>
+                    class LikeButton extends React.Component { <br>
+                    &ensp;    constructor(props) { <br>
+                    &ensp;&ensp;super(props); <br>
+                    &ensp;&ensp;this.state = { liked: false }; <br>
+                    &ensp;    } <br>
+
+                    render() { <br>
+                        &ensp;&ensp;if (this.state.liked) { <br>
+                            &ensp;&ensp;&ensp;return 'You liked this.'; <br>
+                            &ensp;&ensp;} <br>
+
+                    &ensp;return e( <br>
+                    &ensp;&ensp;'button', <br>
+                    &ensp;&ensp;&ensp;{ onClick: () => this.setState({ liked: true }) }, <br>
+                    &ensp;&ensp;&ensp;'Like' <br>
+                    &ensp;&ensp;); <br>
+                    &ensp;} <br>
+                    } 
+                </code>
+            </article>
+        </section>
+        <section id="Hello_world" class="main-section">
+            <header >Hello world</header>
+            <article>
+                
+                <p>The smallest React example looks like this: </p>
+                <code>
+                    ReactDOM.render( <br>
+                    &ensp;    &lt;h1&gt;Hello, world!&lt;/h1&gt;, <br>
+                    &ensp;    document.getElementById('root') <br>
+                    ); 
+                </code>
+               <p>It displays a heading saying “Hello, world!” on the page.</p> 
+            </article>
+        </section>
+        <section id="Rendering_Elements" class="main-section">
+            <header >Rendering Elements</header>
+            <article>
+                
+                <p>
+                    <ul>
+                        <li>Elements are the smallest building blocks of React apps. </li>
+                        <li>An element describes what you want to see on the screen.</li>
+                        <li>Unlike browser DOM elements, React elements are plain objects, and are cheap to create. </li>
+                        <li>React DOM takes care of updating the DOM to match the React elements. </li>
+                    </ul>
+                </p>
+                <code>
+                    const element = &lt;h1&gt;Hello, world&lt;/h1&gt;; 
+                </code>
+                    
+                <p>
+                Let’s say there is a &lt;div&gt; somewhere in your HTML file: <br>
+                </p>
+                <code>
+                        &lt;div id="root"&gt;&lt;/div&gt; 
+                </code>
+                            
+                <p>
+                    We call this a “root” DOM node because everything inside it will be managed by React DOM. <br>
+                            
+                    Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like. <br>
+                            
+                    To render a React element into a root DOM node, pass both to ReactDOM.render(): <br> 
+                </p>
+                <code>
+                        const element = &lt;h1&gt;Hello, world&lt;/h1&gt;; <br>
+                        ReactDOM.render(element, document.getElementById('root')); 
+                </code>
+                
+            </article>
+        </section>
+        <section id="Components_and_Props" class="main-section">
+            <header >Components and Props</header>
+            <article>
+                
+                <p>
+                    Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. <br>
+                    Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.<br>
+                    The simplest way to define a component is to write a JavaScript function:
+                </p>
+                <code>
+                        function Welcome(props) { <br>
+                            &ensp;    return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; <br>
+                        } 
+                </code>
+                        
+                <p>        
+                    This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.
+                </p>
+            </article>
+           </section>
+           <section id="References" class="main-section">
+            <header >References</header>
+            <article>
+                
+                <p>
+                    <ul>
+                        <li>All the documentation in this page is taken from <a href="https://reactjs.org/" target="_black">React - A JavaScript Library</a></li>
+                    </ul>
+
+                </p>
+            </article>
+        </section>
+    </main>
+    </body>
+</html>

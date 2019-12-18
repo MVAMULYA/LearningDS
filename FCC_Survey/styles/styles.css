@@ -1,0 +1,106 @@
+head, body{
+    text-align: center;
+    font-family: 'Asul', sans-serif;
+    background: linear-gradient(-15deg,#ffb3b3,#ffffb3);
+    font-size: 100%;
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+}
+#title{
+    font-weight: bold;
+}
+#survey-form{
+    border-radius: 5px;
+    margin: 20px 125px 20px 125px;     
+    
+    height: auto;
+    width: auto;
+    background: linear-gradient(-15deg,#ffffe6,#ffffff);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   
+}
+#submit{
+    margin: 10px;
+    border-radius: 6px;
+    font-size: 1.25em;
+    height: auto;
+    width: auto;
+    padding: 5px;
+    font-family: 'Asul', sans-serif;
+    color: black;
+    border: 1px solid #1a66ff;
+       
+}
+
+div.floatleft{
+    width: 47%;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: left;
+    vertical-align: top;
+   
+}
+div.floatright{
+    width: 47%;
+    display:inline-block;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: left;  
+   
+    
+}
+div.row{
+    margin: 10px;
+    padding: 5px;
+}
+textarea{
+    border-radius: 5px;
+    margin: 10px;
+    padding: 2px;
+    width: 100%;
+}
+input[type=text], input[type=email] ,input[list]{
+    padding: 8px ;    
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+#description{
+    font-size: 0.8em;
+}
+input[type=checkbox]{
+    margin: 8px;
+}
+button{
+    background-color: #cce6ff;
+    
+    
+}
+
+
+@media only screen and (min-width: 1040px){
+    textarea{
+        width: 80%;
+    }
+    div.floatleft{
+        text-align: right;
+    }
+
+    input[type=text], input[type=email] ,input[list]{
+        width: 50%;
+    }
+    #submit{
+        padding: 10px 50px 10px 50px;
+    }
+
+}
+
+
+
+
+button:hover{
+    background-color: #1a66ff;
+}
